@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+.box {
+    @apply tw-h-[68vh] tw-w-[30vw] tw-bg-slate-200 tw-shadow-lg tw-shadow-black tw-flex tw-justify-center tw-align-middle tw-pt-[3vh] tw-overflow-auto;
+}
+
+.box {
+    * {
+        @apply tw-m-[10px];
+    }
+}
+
+.login-input {
+    @apply tw-shadow tw-appearance-none tw-border tw-rounded tw-w-full tw-py-2 tw-px-3 tw-text-gray-700 tw-leading-tight focus:tw-outline-none focus:tw-ring-1;
+}
+
+.login-button {
+    @apply tw-w-[90%] tw-bg-blue-500 hover:tw-bg-blue-700 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded focus:tw-outline-none focus:tw-ring-1;
+}

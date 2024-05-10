@@ -1,0 +1,144 @@
+<div class="home">
+
+    <nav class="tw-bg-cyan-500 tw-border-gray-200" *ngIf="innerWidth>=maxWidth">
+        <div class="tw-max-w-screen-xl tw-flex tw-flex-wrap tw-items-center tw-justify-between tw-mx-auto tw-p-4">
+            <a routerLink="/">
+                <span>Home</span>
+            </a>
+            <div class="tw-flex tw-justify-center tw-align-middle">
+                <a routerLink="/" class="tw-flex tw-items-center tw-space-x-3 rtl:tw-space-x-reverse">
+                    <img src="../../../assets/4506-200.png" class="tw-h-14 tw-w-14">
+                    <h2 class="tw-w-22">
+                        South Bengal State <br>
+                        Transport Corporation
+                    </h2>
+                </a>
+            </div>
+            <div class="tw-flex tw-p-4">
+                <a routerLink="/about-us" class="nav-link tw-border-amber-950 tw-bg-amber-950 tw-text-white">About us</a>
+                <button class="nav-link tw-border-black tw-tw-text-black">Contact us</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="tw-bg-cyan-500 tw-border-gray-200" *ngIf="innerWidth<maxWidth">
+        <div class="tw-max-w-screen-xl tw-items-center tw-mx-auto tw-p-4">
+            <div class="tw-flex tw-justify-center tw-align-middle">
+                <a routerLink="/" class="tw-flex tw-items-center tw-space-x-3 rtl:tw-space-x-reverse">
+                    <img src="../../../assets/4506-200.png" class="tw-h-14 tw-w-14">
+                    <h2 class="tw-w-22">
+                        South Bengal State <br>
+                        Transport Corporation
+                    </h2>
+                </a>
+                <button (click)="toggleMenu()" data-collapse-toggle="navbar-default" type="button"
+                    class="tw-inline-tw-flex tw-items-center tw-p-2 tw-w-10 tw-h-10 tw-justify-center tw-text-sm tw-text-gray-500 tw-rounded-lg lg:tw-hidden"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <fa-icon [icon]="faBarIcon" id="bar" *ngIf="!showMenu"></fa-icon>
+                    <fa-icon [icon]="faXmarkIcon" id="bar" *ngIf="showMenu"></fa-icon>
+                </button>
+            </div>
+            <div class="w-full md:tw-block md:tw-w-auto" id="navbar-default" *ngIf="showMenu">
+                <div class="md:tw-flex md:tw-flex-col">
+                    <div class="tw-flex tw-justify-center tw-align-middle tw-p-4 tw-m-4">
+                        <a routerLink="/">Home</a>
+                    </div>
+                    <div class="tw-flex tw-justify-center tw-align-middle">
+                        <button class="nav-link tw-border-amber-950 tw-bg-amber-950 tw-text-white">About us</button>
+                        <button class="nav-link tw-border-black tw-text-black">Contact us</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="head-line overflow-auto">
+        <div class="glass tw-flex tw-justify-center tw-align-middle tw-h-[100%]">
+            <div class="head-padder">
+                <div class="tw-flex tw-flex-col">
+                    <h2 class="tw-text-4xl tw-font-semibold mb-4 tw-text-slate-900">Navigate South Bengal Effortlessly
+                    </h2>
+                    <p class="mb-4 tw-text-slate-900 tw-font-light">Discover all bus routes in South Bengal, ensuring
+                        you reach
+                        your destination with ease.</p>
+                    <div class="tw-flex tw-justify-center tw-align-middle" *ngIf="innerWidth>minWidth">
+                        <a class="nav-link tw-border-amber-950 tw-bg-amber-950 tw-text-white">Explore now</a>
+                        <a routerLink="/dashboard" class="nav-link tw-border-black tw-text-black">Search Routes</a>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-justify-center tw-align-middle" *ngIf="innerWidth<=minWidth">
+                        <a class="nav-link tw-border-amber-950 tw-bg-amber-950 tw-text-white tw-w-full">Explore
+                            now</a>
+                        <a routerLink="/dashboard" class="nav-link tw-border-black tw-text-black tw-w-full">Search Routes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-bg">
+    </div>
+
+    <div class="some-info tw-flex p-8">
+        <div class="some-info-box tw-pt-5">
+            <h2 class="tw-text-5xl tw-font-bold tw-pb-10">
+                Get the latest bus route information with SBSTC in Kolkata
+            </h2>
+            <p class="tw-text-xl tw-font-thin">
+                Stay informed about bus schedules, routes, and more with SBSTC, the go-to website for all your bus route
+                information needs in Kolkata, WB.
+                Plan your journey efficiently and conveniently with SBSTC at your fingertips.
+            </p>
+        </div>
+        <div class="some-info-box" id="cover-cars"></div>
+    </div>
+
+    <section class="zigzag-top">
+        <div class="product-overview">
+            <div class="product-item">
+                <h3 class="tw-text-5xl tw-font-semibold">Get all bus route information</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="zigzag-bottom">
+        <div class="people-overview">
+        </div>
+        <div class="locator tw-flex tw-justify-end tw-align-middle tw-pt-24 tw-pr-36">
+            <div class="tw-flex tw-flex-col tw-bg-red-300 tw-pl-20 tw-pr-20 tw-p-10">
+                <h3 class="tw-text-2xl tw-font-medium">Location</h3>
+                <p class="tw-text-lg">Kolkata, West Bengal</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore-button">
+        <div class="glass tw-flex tw-justify-center tw-align-middle tw-h-[100%] tw-p-20 tw-pt-48">
+            <div class="tw-flex tw-flex-col">
+                <p class="tw-text-xl tw-font-normal">
+                    Get accurate route information for Kolkata buses with SBSTC.
+                </p>
+                <div class="tw-flex tw-justify-center tw-align-middle tw-pt-8">
+                    <button
+                        class="nav-link tw-border-amber-950 tw-bg-amber-950 tw-text-white tw-max-w-28">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-sec">
+        <div class="tw-flex tw-justify-center tw-align-middle tw-pt-10">
+            <div class="logo">
+                <a routerLink="/" class="tw-flex tw-items-center tw-space-x-3 rtl:tw-space-x-reverse">
+                    <img src="../../../assets/4506-200.png" class="tw-h-14 tw-w-14">
+                    <h2 class="tw-w-22">
+                        South Bengal State <br>
+                        Transport Corporation
+                    </h2>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,38 @@
+<section class="tw-bg-indigo-800 tw-h-[100vh]">
+    <nav class="tw-relative tw-px-4 t-py-4 tw-flex tw-justify-between tw-items-center tw-pt-1">
+        <a class="tw-text-xl tw-font-bold tw-leading-none tw-text-slate-300 hover:tw-text-white tw-no-underline"
+            routerLink="/">
+            Home
+        </a>
+        <div class="lg:tw-hidden">
+            <button class="tw-navbar-burger tw-flex tw-items-center tw-text-blue-600 tw-p-3">
+                <svg class="tw-block tw-h-4 tw-w-4 tw-fill-current" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title>Mobile menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+            </button>
+        </div>
+        <a class="tw-hidden lg:tw-inline-block lg:tw-ml-auto lg:tw-mr-3 tw-py-2 tw-px-6 tw-bg-gray-50 hover:tw-bg-gray-300 tw-text-sm tw-text-gray-900 tw-font-bold  tw-rounded-xl tw-transition tw-duration-200 tw-no-underline"
+            routerLink="/sign-in">Sign In</a>
+        <a class="tw-hidden lg:tw-inline-block tw-py-2 tw-px-6 tw-bg-blue-500 hover:tw-bg-blue-600 tw-text-sm tw-text-white tw-font-bold tw-rounded-xl tw-transition tw-duration-200 tw-no-underline"
+            routerLink="/login">Login</a>
+    </nav>
+    <div class="tw-flex tw-justify-center tw-align-middle tw-p-[10vh]">
+        <div class="box">
+            <div class="input-container">
+                <input class="input-elm" type="text" placeholder="Article name or keyword..." />
+            </div>
+            <div class="input-container">
+                <input class="input-elm" type="text" placeholder="Article name or keyword..." />
+            </div>
+            <div class="input-container">
+                <input class="input-elm" type="text" placeholder="Article name or keyword..." />
+            </div>
+            <a routerLink="/bus-list" class="search-button">
+                <span id="search">Search</span>
+            </a>
+        </div>
+    </div>
+
+</section>

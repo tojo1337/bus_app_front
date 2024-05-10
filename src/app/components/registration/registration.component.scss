@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+
+input {
+    @apply tw-text-black
+}
+
+#bg-image {
+    background-image: url(../../../assets/mountain-river.jpg);
+}

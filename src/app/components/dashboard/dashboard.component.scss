@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+@import "../login/login.component.scss";
+
+.box {
+    @extend .box;
+    @apply lg:tw-flex lg:tw-h-[20vh] lg:tw-w-[80vw] lg:tw-pb-3 tw-rounded-lg hover:tw-shadow-xl tw-transform hover:tw-scale-105 hover:tw-shadow-black tw-transition tw-duration-500 tw-border-2 tw-border-emerald-500 tw-border-solid tw-bg-gradient-to-t tw-from-neutral-300 tw-via-stone-400 tw-to-neutral-300;
+}
+
+.input-elm {
+    @apply tw-bg-gray-100 tw-outline-none;
+}
+
+.input-container {
+    @apply tw-flex tw-bg-gray-100 tw-p-2 tw-w-[24rem] tw-space-x-4 tw-rounded-lg tw-border-solid tw-border-2 tw-border-emerald-500;
+}
+
+.search-button {
+    @apply tw-bg-transparent tw-border-solid tw-border-emerald-500 tw-border-2 tw-py-1 tw-px-3 tw-text-black tw-font-semibold tw-rounded-lg hover:tw-shadow-lg tw-transform hover:tw-scale-100 hover:tw-shadow-black tw-transition tw-duration-500 hover:tw-bg-emerald-800 hover:tw-border-emerald-800 hover:tw-text-white tw-cursor-pointer tw-flex tw-justify-center;
+}
+
+#search {
+    @apply tw-p-2
+}
