@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Booking Form HTML Template</title>
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<!-- Custom stylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		.header {
+			text-align: center;
+			padding: 20px 0;
+			font-size: 24px;
+			font-weight: bold;
+			background-color: #f7f7f7;
+			margin-bottom: 20px;
+			border-bottom: 2px solid #ddd;
+		}
+		.subheader {
+			text-align: center;
+			font-size: 18px;
+			color: #666;
+			margin-bottom: 20px;
+		}
+		.passenger-group {
+			margin-bottom: 20px;
+			position: relative;
+		}
+		.remove-passenger-btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: red;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		function addPassenger() {
+			var passengerGroup = document.createElement('div');
+			passengerGroup.className = 'row passenger-group';
+			passengerGroup.innerHTML = `
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="form-label">Passenger Name</span>
+						<input class="form-control" type="text" placeholder="Name" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<span class="form-label">Passenger Age</span>
+						<input class="form-control" type="number" placeholder="Age" required>
+					</div>
+				</div>
+				<button type="button" class="remove-passenger-btn" onclick="removePassenger(this)">Remove</button>
+			`;
+			document.getElementById('passengers').appendChild(passengerGroup);
+		}
+
+		function removePassenger(button) {
+			var passengerGroup = button.parentElement;
+			passengerGroup.parentElement.removeChild(passengerGroup);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="header">BOOK YOUR TICKET</div>
+		<div class="subheader">Plan your trip with ease</div>
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<form>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Travelling from</span>
+										<input class="form-control" type="text" placeholder="City">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Travelling to</span>
+										<input class="form-control" type="text" placeholder="City">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Departing</span>
+										<input class="form-control" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Adults (18+)</span>
+										<select class="form-control">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Children (0-17)</span>
+										<select class="form-control">
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-btn">
+										<button class="submit-btn">Show Buses</button>
+									</div>
+								</div>
+							</div>
+							<div id="passengers">
+								<div class="row passenger-group">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Passenger Name</span>
+											<input class="form-control" type="text" placeholder="Name" required>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Passenger Age</span>
+											<input class="form-control" type="number" placeholder="Age" required>
+										</div>
+									</div>
+									<button type="button" class="remove-passenger-btn" onclick="removePassenger(this)">Remove</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<button type="button" class="btn btn-secondary" onclick="addPassenger()">Add Passenger</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
