@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .complaint-table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Complaints Section</h2>
+    <table class="table table-hover complaint-table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Complaint's No.</th>
+                <th scope="col">Title of Complaint</th>
+                <th scope="col">Email ID</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="complaint-list">
+            <!-- Rows will be added dynamically here -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Sample complaints data
+    const complaints = [
+        { title: 'Bus not on time', email: 'user1@example.com' },
+        { title: 'Rude behavior by driver', email: 'user2@example.com' },
+        { title: 'Dirty seats', email: 'user3@example.com' },
+        { title: 'Overcharged fare', email: 'user4@example.com' }
+    ];
+
+    function loadComplaints() {
+        const complaintList = document.getElementById('complaint-list');
+        complaintList.innerHTML = ''; // Clear the list first
+        complaints.forEach((complaint, index) => {
+            const row = document.createElement('tr');
+            // Add a class for alternating row colors
+            row.className = index % 2 === 0 ? 'table-primary' : 'table-secondary';
+            row.innerHTML = `
+                <th scope="row">${index + 1}</th>
+                <td>${complaint.title}</td>
+                <td>${complaint.email}</td>
+                <td><button class="btn btn-danger btn-sm" onclick="deleteComplaint(${index})">Delete</button></td>
+            `;
+            complaintList.appendChild(row);
+        });
+    }
+
+    function deleteComplaint(index) {
+        complaints.splice(index, 1); // Remove the complaint from the array
+        loadComplaints(); // Reload the list
+    }
+
+    // Load complaints on page load
+    document.addEventListener('DOMContentLoaded', loadComplaints);
+</script>
+
+</body>
+</html>
